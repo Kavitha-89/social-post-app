@@ -30,7 +30,7 @@ function Login() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://social-post-app-j3eo.onrender.com/api/auth/login",
         formData
       );
 

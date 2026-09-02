@@ -28,7 +28,7 @@ function Feed() {
   const fetchPosts = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/posts"
+        "https://social-post-app-j3eo.onrender.com/api/posts"
       );
 
       setPosts(response.data);
@@ -52,7 +52,7 @@ function Feed() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/posts",
+        "https://social-post-app-j3eo.onrender.com/api/posts",
         {
           text: text.trim(),
           image: image.trim(),
@@ -83,7 +83,7 @@ function Feed() {
   const handleLike = async (postId) => {
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/posts/${postId}/like`,
+        `https://social-post-app-j3eo.onrender.com/api/posts/${postId}/like`,
         {},
         {
           headers: {
@@ -111,7 +111,7 @@ function Feed() {
 
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/posts/${postId}/comment`,
+        `https://social-post-app-j3eo.onrender.com/api/posts/${postId}/comment`,
         {
           text: comment,
         },
